@@ -14,19 +14,21 @@ $ go get github.com/andrewslotin/skyscanner-go-sdk
 package main
 
 import (
+	"fmt"
 	"os"
-	
-    "github.com/blwsh/SkyscannerGoSDK/pkg/client"
-	"github.com/blwsh/SkyscannerGoSDK/pkg/types"
+	"strconv"
+
+	"github.com/blwsh/SkyscannerGoSDK/pkg/client"
 	"github.com/blwsh/SkyscannerGoSDK/pkg/requests"
-	requestTypes "github.com/blwsh/SkyscannerGoSDK/pkg/types/requests"
+	"github.com/blwsh/SkyscannerGoSDK/pkg/types"
 	"github.com/blwsh/SkyscannerGoSDK/pkg/types/flight"
+	requestTypes "github.com/blwsh/SkyscannerGoSDK/pkg/types/requests"
 )
 
 func main() {
 	client.SetApiKey(os.Getenv("SKYSCANNER_API_KEY"))
 	client.SetLocale("en-US")
-	
+
 	search, err := requests.CreateFlightSearch(
 		requestTypes.CreateQueryRequest{
 			Query: requestTypes.CreateQuery{
@@ -50,7 +52,7 @@ func main() {
 			},
 		},
 	)
-	
+
 	if err != nil {
 		return
 	}
@@ -73,6 +75,7 @@ func main() {
 		}
 	}
 }
+
 ```
 
 Output
