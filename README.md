@@ -5,7 +5,7 @@ Unofficial Go SDK for Skyscanner API
 ## Installation
 
 ```bash
-$ go get github.com/andrewslotin/skyscanner-go-sdk
+$ go get github.com/blwsh/SkyscannerGoSDK
 ```
 
 ## Example
