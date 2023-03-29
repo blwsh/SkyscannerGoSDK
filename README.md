@@ -99,10 +99,10 @@ https://developers.skyscanner.net/docs/intro
 
 [MIT](LICENSE)
 
-## Authors
-
-* [Ben Watson](https://github.com/blwsh)
-
 ## Contributing
 
 [Contributing](CONTRIBUTING.md)
+
+## Authors
+
+* [Ben Watson](https://github.com/blwsh)
