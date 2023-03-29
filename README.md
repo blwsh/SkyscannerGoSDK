@@ -90,4 +90,19 @@ func main() {
 £155.63 | Manchester @ 12:35 >-(270 mins)-> Hamburg International @ 18:05
 ```
 
-https://developers.skyscanner.net/docs/getting-started/requests-and-responses
+
+## Documentation
+
+https://developers.skyscanner.net/docs/intro
+
+## License
+
+[MIT](LICENSE)
+
+## Authors
+
+* [Ben Watson](https://github.com/blwsh)
+
+## Contributing
+
+[Contributing](CONTRIBUTING.md)
