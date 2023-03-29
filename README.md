@@ -90,6 +90,23 @@ func main() {
 £155.63 | Manchester @ 12:35 >-(270 mins)-> Hamburg International @ 18:05
 ```
 
+The above example shows a small set of results from the CreateFlightSearch function.
+Within the response from the function there is a sessionToken which we can pass to
+the PollLiveFlights function in order to retrieve the entire results set.
+
+You can see an example in [the test for the PollLiveFlights](pkg/requests/pollLiveFlights_test.go) function.
+
+```go
+pollResponse, err := search.PollResponse{}, nil
+
+for !pollResponse.Status.IsComplete() {
+	pollResponse, err = PollLiveFlights(searchQuery.PollRequest{SessionToken: createResponse.SessionToken})
+
+	// Handle response & error here
+	// ...
+}
+```
+
 
 ## Documentation
 
