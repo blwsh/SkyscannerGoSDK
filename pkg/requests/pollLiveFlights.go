@@ -2,7 +2,7 @@ package requests
 
 import (
 	"fmt"
-	client "github.com/blwsh/SkyscannerGoSDK/internal/client"
+	client "github.com/blwsh/SkyscannerGoSDK/pkg/client"
 	pollQuery "github.com/blwsh/SkyscannerGoSDK/pkg/types/requests"
 	"github.com/blwsh/SkyscannerGoSDK/pkg/types/responses/search"
 )

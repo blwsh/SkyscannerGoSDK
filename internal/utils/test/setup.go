@@ -1,7 +1,7 @@
 package test
 
 import (
-	client "github.com/blwsh/SkyscannerGoSDK/internal/client"
+	client "github.com/blwsh/SkyscannerGoSDK/pkg/client"
 )
 
 func Setup() {

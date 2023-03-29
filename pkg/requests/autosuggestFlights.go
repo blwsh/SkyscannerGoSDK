@@ -1,7 +1,7 @@
 package requests
 
 import (
-	client "github.com/blwsh/SkyscannerGoSDK/internal/client"
+	client "github.com/blwsh/SkyscannerGoSDK/pkg/client"
 	"github.com/blwsh/SkyscannerGoSDK/pkg/types/requests"
 	"github.com/blwsh/SkyscannerGoSDK/pkg/types/responses"
 )

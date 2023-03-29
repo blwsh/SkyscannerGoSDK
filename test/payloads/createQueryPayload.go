@@ -3,21 +3,21 @@ package payloads
 import (
 	"github.com/blwsh/SkyscannerGoSDK/pkg/types"
 	"github.com/blwsh/SkyscannerGoSDK/pkg/types/flight"
-	searchQuery "github.com/blwsh/SkyscannerGoSDK/pkg/types/requests"
+	"github.com/blwsh/SkyscannerGoSDK/pkg/types/requests"
 )
 
-var CreateQueryPayload = searchQuery.CreateQueryRequest{
-	Query: searchQuery.CreateQuery{
+var CreateQueryPayload = requests.CreateQueryRequest{
+	Query: requests.CreateQuery{
 		Adults:               1,
 		Market:               "US",
 		Currency:             "USD",
 		Locale:               "en-US",
 		DateTimeGroupingType: types.ByMonth,
 		CabinClass:           "CABIN_CLASS_ECONOMY",
-		QueryLegs: []searchQuery.LegQuery{
+		QueryLegs: []requests.LegQuery{
 			{
-				OriginPlaceId:      searchQuery.PlaceIdQuery{Iata: "LHR"},
-				DestinationPlaceId: searchQuery.PlaceIdQuery{Iata: "EDI"},
+				OriginPlaceId:      requests.PlaceIdQuery{Iata: "MAN"},
+				DestinationPlaceId: requests.PlaceIdQuery{Iata: "HAM"},
 				Date: flight.Date{
 					Year:  2023,
 					Month: 12,
