@@ -27,15 +27,15 @@ import (
 
 func main() {
     client.SetApiKey(os.Getenv("SKYSCANNER_API_KEY"))
-    client.SetLocale("en-US")
+    client.SetLocale("en-GB")
 
     search, err := requests.CreateFlightSearch(
         requestTypes.CreateQueryRequest{
             Query: requestTypes.CreateQuery{
                 Adults:               1,
-                Market:               "US",
-                Currency:             "USD",
-                Locale:               "en-US",
+                Market:               "GB",
+                Currency:             "GBP",
+                Locale:               "en-GB",
                 DateTimeGroupingType: types.ByMonth,
                 CabinClass:           "CABIN_CLASS_ECONOMY",
                 QueryLegs: []requests.LegQuery{
