@@ -94,7 +94,7 @@ The above example shows a small set of results from the `CreateFlightSearch` fun
 Within the response from the `CreateFlightSearch` function, there is a `sessionToken` which we can pass to
 the `PollLiveFlights` function in order to retrieve the entire results set.
 
-You can see an example in [the test for the PollLiveFlights](pkg/requests/pollLiveFlights_test.go) function.
+You can see an example in [the test for the PollLiveFlights](pkg/client/requests/pollLiveFlights_test.go) function.
 
 ```go
 pollResponse, err := search.PollResponse{}, nil
