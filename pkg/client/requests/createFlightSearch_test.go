@@ -15,6 +15,14 @@ func init() {
 func TestCreateFlightSearch(t *testing.T) {
 	search, err := CreateFlightSearch(payloads.CreateQueryPayload)
 
+	if err != nil {
+		t.Fatalf("Error: %v", err)
+	}
+
+	if !search.Status.IsValid() {
+		t.Fatalf("Status is not valid: %v", search.Status)
+	}
+
 	for _, itinerary := range search.Content.Results.Itineraries {
 		for _, option := range itinerary.PricingOptions {
 			i, _ := strconv.ParseFloat(option.Price.Amount, 64)
@@ -31,13 +39,6 @@ func TestCreateFlightSearch(t *testing.T) {
 					fmt.Sprintf("%02d:%02d", leg.ArrivalDateTime.Hour, leg.ArrivalDateTime.Minute))
 			}
 		}
-	}
-	if err != nil {
-		t.Fatalf("Error: %v", err)
-	}
-
-	if !search.Status.IsValid() {
-		t.Fatalf("Status is not valid: %v", search.Status)
 	}
 
 	t.Log(search)

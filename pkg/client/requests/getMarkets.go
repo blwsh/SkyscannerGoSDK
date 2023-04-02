@@ -7,7 +7,7 @@ import (
 
 // GetMarkets
 //
-// Returns a list of markets that SkyScanner supports.
+// Returns a list of markets that Skyscanner supports.
 //
 // @see https://developers.skyscanner.net/docs/culture/markets
 func GetMarkets() (responses.MarketsResponse, error) {
